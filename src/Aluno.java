@@ -13,6 +13,7 @@ public class Aluno {
 		this.matricula = matricula;
 	}
 	
+	
 	public String getNome () {
 		return nome;
 	}
@@ -20,6 +21,7 @@ public class Aluno {
 	public void setNome (String nome) {
 		this.nome = nome;
 	}
+	
 	
 	public String getSemestreIngresso () {
 		return semestreIngresso;
