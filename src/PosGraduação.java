@@ -20,5 +20,4 @@ public class PosGraduação extends Aluno{
 		this.dataDefesa = dataDefesa;
 	}
 	
-	
 }
