@@ -1,6 +1,8 @@
 
 public class Estagio extends Disciplina{
 
+	Professor p;
+	
 	private String locaEstagio;
 	private String responsavel;
 	

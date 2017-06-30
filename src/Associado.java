@@ -1,5 +1,5 @@
 
-public class Associado {
+public class Associado extends Adjunto {
 
 	private String areaPesquisa;
 	

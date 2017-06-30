@@ -2,6 +2,8 @@ import java.util.Date;
 
 public class PosGraduação extends Aluno{
 
+	Professor p;
+	
 	private String semestreQualificacao;
 	private Date dataDefesa;
 	

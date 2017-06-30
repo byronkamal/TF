@@ -1,6 +1,9 @@
 
 public class Turma {
 
+	Disciplina d;
+	Professor p;
+	
 	private int codigo;
 	private String horario;
 	
