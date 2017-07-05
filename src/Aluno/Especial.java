@@ -1,4 +1,4 @@
-
+package Aluno;
 public class Especial extends PosGraduação{
 	
 	private boolean taxaPaga;

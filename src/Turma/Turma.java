@@ -1,3 +1,6 @@
+package Turma;
+import Disciplina.Disciplina;
+import Professor.Professor;
 
 public class Turma {
 

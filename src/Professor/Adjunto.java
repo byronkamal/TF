@@ -1,3 +1,4 @@
+package Professor;
 import java.util.Scanner;
 
 public class Adjunto extends Assistente{

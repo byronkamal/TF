@@ -1,3 +1,4 @@
+package Aluno;
 import java.util.Date;
 
 public class Graduação extends Aluno {

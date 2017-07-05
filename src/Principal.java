@@ -1,3 +1,4 @@
+import Professor.Titular;
 
 public class Principal {
 

@@ -1,3 +1,5 @@
+package Disciplina;
+import Professor.Professor;
 
 public class Estagio extends Disciplina{
 
