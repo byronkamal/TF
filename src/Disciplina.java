@@ -1,8 +1,17 @@
+import java.util.*;
 
 public class Disciplina {
 
 	private String nome;
 	private int cargaHoraria;
+	
+	Disciplina() {
+		int cg;
+		Scanner s = new Scanner(System.in);
+		cg = s.nextInt();
+		
+		this.cargaHoraria = cg;
+	}
 	
 	public String getNome() {
 		return nome;
