@@ -30,8 +30,10 @@ public class Professor {
 	public String getFormacao() {
 		return formacao;
 	}
-	public void setFormacao(String formacao) {
-		this.formacao = formacao;
+	public void setFormacao() {
+		s = new Scanner(System.in);
+		String formacao2 = s.nextLine();
+		this.formacao = formacao2;
 	}
 	
 	public float getSalario() {

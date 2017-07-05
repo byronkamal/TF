@@ -1,8 +1,11 @@
 package Disciplina;
+import java.util.Scanner;
+
 import Professor.Professor;
 
 public class Estagio extends Disciplina{
 
+	Scanner s;
 	Professor p;
 	
 	private String localEstagio;
@@ -12,8 +15,10 @@ public class Estagio extends Disciplina{
 		return localEstagio;
 	}
 	
-	public void setLocaEstagio(String localEstagio) {
-		this.localEstagio = localEstagio;
+	public void setLocaEstagio() {
+		s = new Scanner(System.in);
+		String localEstagio2 = s.nextLine();
+		this.localEstagio = localEstagio2;
 	}
 	
 	
@@ -21,7 +26,9 @@ public class Estagio extends Disciplina{
 		return responsavel;
 	
 	}
-	public void setResponsavel(String responsavel) {
+	public void setResponsavel() {
+		s = new Scanner(System.in);
+		String responsavel2 = s.nextLine();
 		this.responsavel = responsavel;
 	}
 	

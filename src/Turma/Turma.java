@@ -1,9 +1,11 @@
 package Turma;
+import java.util.Scanner;
+
 import Disciplina.Disciplina;
 import Professor.Professor;
 
 public class Turma {
-
+	Scanner s;
 	Disciplina d;
 	Professor p;
 	
@@ -14,8 +16,10 @@ public class Turma {
 		return codigo;
 	}
 	
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setCodigo() {
+		s = new Scanner(System.in);
+		int codigo2 = s.nextInt();
+		this.codigo = codigo2;
 	}
 	
 	
@@ -23,8 +27,10 @@ public class Turma {
 		return horario;
 	}
 	
-	public void setHorario(String horario) {
-		this.horario = horario;
+	public void setHorario() {
+		s = new Scanner(System.in);
+		String horario2 = s.nextLine();
+		this.horario = horario2;
 	}
 	
 }
