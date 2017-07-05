@@ -3,15 +3,15 @@ public class Estagio extends Disciplina{
 
 	Professor p;
 	
-	private String locaEstagio;
+	private String localEstagio;
 	private String responsavel;
 	
-	public String getLocaEstagio() {
-		return locaEstagio;
+	public String getLocalEstagio() {
+		return localEstagio;
 	}
 	
-	public void setLocaEstagio(String locaEstagio) {
-		this.locaEstagio = locaEstagio;
+	public void setLocaEstagio(String localEstagio) {
+		this.localEstagio = localEstagio;
 	}
 	
 	
