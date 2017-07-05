@@ -1,21 +1,35 @@
+import java.text.*;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Titular extends Associado{
 
-	private Date concurso;
-	private Date dataAdmissao;
+	Scanner s;
 	
-	public Date getConcurso() {
-		return concurso;
-	}
-	public void setConcurso(Date concurso) {
-		this.concurso = concurso;
+	public void setConcurso() {
+		try {
+	        s = new Scanner(System.in);
+	        System.out.println("Digite uma data: ");
+		String concurso2 = s.nextLine();
+		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");  
+		Date dt = df.parse(concurso2);
+		System.out.println(dt);
+	    } catch (Exception ex) {
+	        ex.printStackTrace();
+	    }
 	}
 	
-	public Date getDataAdmissao() {
-		return dataAdmissao;
-	}
-	public void setDataAdmissao(Date dataAdmissao) {
-		this.dataAdmissao = dataAdmissao;
+	
+	public void setDataAdmissao() {
+		try {
+	        s = new Scanner(System.in);
+	        System.out.println("Digite uma data: ");
+		String dataAdmissao2 = s.nextLine();
+		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");  
+		Date dt = df.parse(dataAdmissao2);
+		System.out.println(dt);
+	    } catch (Exception ex) {
+	        ex.printStackTrace();
+	    }
 	}
 }

@@ -5,12 +5,11 @@ public class Disciplina {
 	private String nome;
 	private int cargaHoraria;
 	
-	Disciplina() {
-		int cg;
+	 Disciplina() {
+		String nome;
 		Scanner s = new Scanner(System.in);
-		cg = s.nextInt();
-		
-		this.cargaHoraria = cg;
+		nome = s.nextLine();
+		this.nome= nome;
 	}
 	
 	public String getNome() {
@@ -29,5 +28,6 @@ public class Disciplina {
 	public void setCargaHoraria(int cargaHoraria) {
 		this.cargaHoraria = cargaHoraria;
 	}
+
 		
 }
