@@ -13,6 +13,7 @@ public class Professor {
 		return matriculaSiape;
 	}
 	public void setMatriculaSiape() {
+		System.out.println("\nDigite matricula Siape");
 		s = new Scanner(System.in);
 		int matriculaSiape2 = s.nextInt();
 		this.matriculaSiape = matriculaSiape2;
@@ -22,6 +23,7 @@ public class Professor {
 		return matriculaFUB;
 	}
 	public void setMatriculaFUB() {
+		System.out.println("\nDigite matricula FUB:");
 		s = new Scanner(System.in);
 		int matriuculaFUB2 = s.nextInt();
 		this.matriculaFUB = matriculaFUB;
@@ -31,6 +33,7 @@ public class Professor {
 		return formacao;
 	}
 	public void setFormacao() {
+		System.out.println("\nDigite formacao professor:");
 		s = new Scanner(System.in);
 		String formacao2 = s.nextLine();
 		this.formacao = formacao2;
@@ -40,6 +43,7 @@ public class Professor {
 		return salario;
 	}
 	public void setSalario() {
+		System.out.println("\nDigite salario professor:");
 		s = new Scanner(System.in);
 		float salario = s.nextFloat();
 		this.salario = salario;

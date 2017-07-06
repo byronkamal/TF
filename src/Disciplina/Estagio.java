@@ -16,6 +16,7 @@ public class Estagio extends Disciplina{
 	}
 	
 	public void setLocaEstagio() {
+		System.out.println("\nDigite local estagio:");
 		s = new Scanner(System.in);
 		String localEstagio2 = s.nextLine();
 		this.localEstagio = localEstagio2;
@@ -27,6 +28,7 @@ public class Estagio extends Disciplina{
 	
 	}
 	public void setResponsavel() {
+		System.out.println("\nDigite professor responsavel:");
 		s = new Scanner(System.in);
 		String responsavel2 = s.nextLine();
 		this.responsavel = responsavel;

@@ -28,7 +28,6 @@ public class Principal {
 		"3 - Especial\n");
 		int opcaoAluno = s.nextInt();	
 		if(opcaoAluno == 1) {
-			Aluno a = new Aluno();
 			Graduacao g = new Graduacao();
 			g.setNome();
 			g.setMatricula();
@@ -39,7 +38,6 @@ public class Principal {
 		}
 		
 		if(opcaoAluno == 2) {
-			Aluno a = new Aluno();
 			PosGraduação pg = new PosGraduação();
 			pg.setNome();
 			pg.setMatricula();
@@ -49,7 +47,6 @@ public class Principal {
 		}
 		
 		if(opcaoAluno == 3) {
-			Aluno a = new Aluno();
 			Especial e = new Especial();
 			e.setNome();
 			e.setNome();
@@ -157,7 +154,19 @@ public class Principal {
 		s = new Scanner(System.in);
 		int opcaoDisciplina = s.nextInt();
 		
+		if(opcaoDisciplina == 1) {
+			Disciplina d = new Disciplina();
+			d.setNome();
+			d.setNome();
+		}
 		
+		if(opcao == 2) {
+			Estagio e = new Estagio();
+			e.setNome();
+			e.setNome();
+			e.setResponsavel();
+			e.setLocaEstagio();
+		}
 		return;
 		
 		case 4:
@@ -170,13 +179,7 @@ public class Principal {
 		default:
 			System.out.println("Opcao incorreta!");
 			return;
-		}
-			
-			
-			
-			
-			
-			
+		}			
 			
 	}
 }

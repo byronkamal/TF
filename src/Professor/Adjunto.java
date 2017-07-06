@@ -13,6 +13,7 @@ public class Adjunto extends Assistente{
 		return doutorado;
 	}
 	public void setDoutorado() {
+		System.out.println("\nDigite doutorado:");
 		s = new Scanner(System.in);
 		String doutorado2 = s.nextLine();
 		this.doutorado = doutorado2;
@@ -22,6 +23,7 @@ public class Adjunto extends Assistente{
 		return anoDoutorado;
 	}
 	public void setAnoDoutorado() {
+		System.out.println("\nDigite ano doutorado:");
 		s = new Scanner(System.in);
 		int anoDoutorado2 = s.nextInt();
 		this.anoDoutorado = anoDoutorado2;
