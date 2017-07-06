@@ -17,6 +17,7 @@ public class Turma {
 	}
 	
 	public void setCodigo() {
+		System.out.println("Digite o Codigo da Turma: \n");
 		s = new Scanner(System.in);
 		int codigo2 = s.nextInt();
 		this.codigo = codigo2;
@@ -28,10 +29,10 @@ public class Turma {
 	}
 	
 	public void setHorario() {
+		System.out.println("Digite o Horario: \n");
 		s = new Scanner(System.in);
 		String horario2 = s.nextLine();
 		this.horario = horario2;
 	}
-	
 	
 }

@@ -5,7 +5,7 @@ public class Disciplina {
 
 	Scanner s;
 	private String nome;
-	private int cargaHoraria;
+	private String cargaHoraria;
 	
 	public String getNome() {
 		return nome;
@@ -19,14 +19,14 @@ public class Disciplina {
 	
 	
 	}
-	public int getCargaHoraria() {
+	public String getCargaHoraria() {
 		return cargaHoraria;
 	
 	}
 	public void setCargaHoraria() {
 		System.out.println("\nDigite carga horaria disciplina:");
 		s = new Scanner(System.in);
-		int cargaHoraria2 = s.nextInt();
+		String cargaHoraria2 = s.nextLine();
 		this.cargaHoraria = cargaHoraria2;
 	}
 

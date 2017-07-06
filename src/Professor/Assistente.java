@@ -6,12 +6,14 @@ public class Assistente extends Auxiliar{
 	Scanner s;
 	
 	private String mestrado;
-	private int anoMestrado;
+	private String anoMestrado;
 	private String tituloDissertacao;
 	
 	public String getMestrado() {
 		return mestrado;
 	}
+	
+	
 	public void setMestrado() {
 		System.out.println("\nDigite mestrado do professor:");
 		s = new Scanner(System.in);
@@ -19,13 +21,13 @@ public class Assistente extends Auxiliar{
 		this.mestrado = mestrado2;
 	}
 	
-	public int getAnoMestrado() {
+	public String getAnoMestrado() {
 		return anoMestrado;
 	}
 	public void setAnoMestrado() {
 		System.out.println("\nDigite ano mestrado:");
 		s = new Scanner(System.in);
-		int anoMestrado2 = s.nextInt();
+		String anoMestrado2 = s.nextLine();
 		this.anoMestrado = anoMestrado2;
 	}
 	

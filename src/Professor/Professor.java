@@ -4,28 +4,28 @@ import java.util.Scanner;
 public class Professor {
 	Scanner s;
 	
-	private int matriculaSiape;
-	private int matriculaFUB;
+	private String matriculaSiape;
+	private String matriculaFUB;
 	private String formacao;
-	private float salario;
+	private String salario;
 	
-	public int getMatriculaSiape() {
+	public String getMatriculaSiape() {
 		return matriculaSiape;
 	}
 	public void setMatriculaSiape() {
 		System.out.println("\nDigite matricula Siape");
 		s = new Scanner(System.in);
-		int matriculaSiape2 = s.nextInt();
+		String matriculaSiape2 = s.nextLine();
 		this.matriculaSiape = matriculaSiape2;
 	}
 	
-	public int getMatriculaFUB() {
+	public String getMatriculaFUB() {
 		return matriculaFUB;
 	}
 	public void setMatriculaFUB() {
 		System.out.println("\nDigite matricula FUB:");
 		s = new Scanner(System.in);
-		int matriuculaFUB2 = s.nextInt();
+		String matriuculaFUB2 = s.nextLine();
 		this.matriculaFUB = matriculaFUB;
 	}
 	
@@ -39,13 +39,13 @@ public class Professor {
 		this.formacao = formacao2;
 	}
 	
-	public float getSalario() {
+	public String getSalario() {
 		return salario;
 	}
 	public void setSalario() {
 		System.out.println("\nDigite salario professor:");
 		s = new Scanner(System.in);
-		float salario = s.nextFloat();
+		String salario = s.nextLine();
 		this.salario = salario;
 	}
 

@@ -6,7 +6,7 @@ public class Adjunto extends Assistente{
 	Scanner s;
 	
 	private String doutorado;
-	private int anoDoutorado;
+	private String anoDoutorado;
 	private String tituloTese;
 	
 	public String getDoutorado() {
@@ -19,13 +19,13 @@ public class Adjunto extends Assistente{
 		this.doutorado = doutorado2;
 	}
 	
-	public int getAnoDoutorado() {
+	public String getAnoDoutorado() {
 		return anoDoutorado;
 	}
 	public void setAnoDoutorado() {
 		System.out.println("\nDigite ano doutorado:");
 		s = new Scanner(System.in);
-		int anoDoutorado2 = s.nextInt();
+		String anoDoutorado2 = s.nextLine();
 		this.anoDoutorado = anoDoutorado2;
 	}
 	

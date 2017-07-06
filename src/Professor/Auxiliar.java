@@ -5,7 +5,7 @@ public class Auxiliar extends Professor{
 	Scanner s;
 	
 	private String graduacao;
-	private int anoGraduacao;
+	private String anoGraduacao;
 	
 	public String getGraduacao() {
 		return graduacao;
@@ -17,13 +17,13 @@ public class Auxiliar extends Professor{
 		this.graduacao = graduacao2;
 	
 	}
-	public int getAnoGraduacao() {
+	public String getAnoGraduacao() {
 		return anoGraduacao;
 	}
 	public void setAnoGraduacao() {
 		System.out.println("\nDigite ano graduacao do professor:");
 		s = new Scanner(System.in);
-		int anoGraduacao2 = s.nextInt();
+		String anoGraduacao2 = s.nextLine();
 		this.anoGraduacao = anoGraduacao2;
 	}
 }
