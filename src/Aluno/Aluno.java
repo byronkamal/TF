@@ -2,24 +2,28 @@ package Aluno;
 
 import java.util.Scanner;
 
+import javax.swing.*;
+
+import Exceção.InformacaoFaltanteException;
+
 public class Aluno {
 
-	private int matricula;
+	private String matricula;
 	private String nome;
 	private String semestreIngresso;
 	
 
 	public void setMatricula() {
 		
-		int matricula2;
+		String matricula2;
 		Scanner s = new Scanner(System.in);
 		System.out.println("Digite a Matricula da(o) Aluna(o): \n");
-		matricula2 = s.nextInt();
+		matricula2 = s.nextLine();
 		
 		this.matricula = matricula2;
 	}
 	
-	public int getMatricula() {
+	public String getMatricula() {
 		return matricula;
 	}
 	
@@ -48,5 +52,19 @@ public class Aluno {
 		System.out.println("Digite o Semestre de Ingresso na Universidade: \n");
 		semestre2 = s.nextLine();
 		this.semestreIngresso = semestre2;
+	{
+		
+		try {
+			if(getMatricula().isEmpty() ||getNome().isEmpty() || getSemestreIngresso().isEmpty()) {
+				throw new InformacaoFaltanteException("\nFalta informacao!!");
+			}
+				
+			}
+		catch(InformacaoFaltanteException e) {
+			e.printStackTrace();
+			}
+		}
+	System.out.println("\n");
 	}
+	
 }
