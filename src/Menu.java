@@ -51,13 +51,21 @@ if(opcaoAluno == 1) {
 
 if(opcaoAluno == 2) {
 	PosGraduação pg = new PosGraduação();
+	System.out.println("Informações do(a) orientador(a):\n");
 	pro = new Professor();
+	Thread.sleep(50);
 	pro.setMatriculaFUB();
+	Thread.sleep(50);
 	pro.setMatriculaSiape();
+	Thread.sleep(50);
 	pro.setFormacao();
+	Thread.sleep(50);
 	pro.setSalario();
+	Thread.sleep(50);
 	pg.p = pro;
 	pg.OrientadorProfessor(pro);
+	Thread.sleep(50);
+	System.out.println("Informações do(a) aluno(a):\n");
 	Thread.sleep(50);
 	pg.setNome();
 		Thread.sleep(50);
@@ -73,12 +81,20 @@ if(opcaoAluno == 2) {
 if(opcaoAluno == 3) {
 	Especial e = new Especial();
 	pro = new Professor();
+	System.out.println("Informações do(a) orientador(a):\n");
+	Thread.sleep(50);
 	pro.setMatriculaFUB();
+	Thread.sleep(50);
 	pro.setMatriculaSiape();
+	Thread.sleep(50);
 	pro.setFormacao();
+	Thread.sleep(50);
 	pro.setSalario();
+	Thread.sleep(50);
 	e.p = pro;
 	e.OrientadorProfessor(pro);
+	Thread.sleep(50);
+	System.out.println("Informações do(a) aluno(a):\n");
 	Thread.sleep(50);
 	e.setNome();
 		Thread.sleep(50);
@@ -269,20 +285,32 @@ return;
 
 case 4:
 	Turma t = new Turma();
+	Thread.sleep(50);
 	disc = new Disciplina();
+	Thread.sleep(50);
 	pro = new Professor();
+	System.out.println("Informações do(a) professor(a) associado(a):\n");
+	Thread.sleep(50);
 	pro.setMatriculaFUB();
+	Thread.sleep(50);
 	pro.setMatriculaSiape();
+	Thread.sleep(50);
 	pro.setFormacao();
+	Thread.sleep(50);
 	pro.setSalario();
+	Thread.sleep(50);
 	t.p = pro;
 	t.ProfessorFaltante(pro);
 	Thread.sleep(50);
+	System.out.println("Informações da disciplina:\n");
 	disc.setNome();
+	Thread.sleep(50);
 	disc.setCargaHoraria();
+	Thread.sleep(50);
 	t.d = disc;
 	t.DisciplinaFaltante(disc);
 		Thread.sleep(50);
+		System.out.println("Informações da turma:\n");
 	t.setCodigo();
 		Thread.sleep(50);
 	t.setHorario();
