@@ -17,7 +17,7 @@ public class Associado extends Adjunto {
 	public void setAreaPesquisa(){
 		s = new Scanner(System.in);
 		String areaPesquisa2 = s.nextLine();
-		this.areaPesquisa = areaPesquisa;
+		this.areaPesquisa = areaPesquisa2;
 		
 		try {
 			if(getAreaPesquisa().isEmpty()) {
@@ -26,7 +26,7 @@ public class Associado extends Adjunto {
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: ", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Area de Pesquisa", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}

@@ -10,7 +10,7 @@ import Turma.*;
 public class Principal {
 
 	
-	public static void main(String[] args ) {
+	public static void main(String[] args ) throws InterruptedException {
 		
 		System.out.println(">>>MENU<<<\n" +
 				"1 - Cadastrar Aluno\n" + 

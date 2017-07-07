@@ -29,7 +29,7 @@ public class Adjunto extends Assistente{
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Doutorado", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Doutorado", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}
@@ -50,7 +50,7 @@ public class Adjunto extends Assistente{
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Ano Doutorado", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Ano Doutorado", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}
@@ -70,7 +70,7 @@ public class Adjunto extends Assistente{
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Titulo Tese", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Titulo Tese", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}

@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-import Aluno.Especial;
-import Aluno.Graduacao;
-import Aluno.PosGraduação;
+import Aluno.*;
 import Disciplina.Disciplina;
 import Disciplina.Estagio;
 import Exceção.InformacaoFaltanteException;
@@ -10,18 +8,23 @@ import Professor.Adjunto;
 import Professor.Assistente;
 import Professor.Associado;
 import Professor.Auxiliar;
+import Professor.Professor;
 import Professor.Titular;
 import Turma.Turma;
 
 public class Menu {
+	Professor pro;
+	Disciplina disc;
 	
 	Scanner s;
 	
-	Menu(int num) {
+	Menu(int num) throws InterruptedException {
 	
 	int numero = num;
 	
 	do {
+		
+		
 switch (numero){
 
 case 1:
@@ -35,32 +38,65 @@ int opcaoAluno = s.nextInt();
 if(opcaoAluno == 1) {
 	Graduacao g = new Graduacao();
 	g.setNome();
+		Thread.sleep(50);
 	g.setMatricula();
+		Thread.sleep(50);
 	g.setSemestreIngresso();
+		Thread.sleep(50);
 	g.setFormaIngresso();
+		Thread.sleep(50);
 	g.setCurso();
+		Thread.sleep(50);
 	g.setProvavelFormatura();
+		Thread.sleep(50);
 	
 	}
 
 if(opcaoAluno == 2) {
 	PosGraduação pg = new PosGraduação();
+	pro = new Professor();
+	pro.setMatriculaFUB();
+	pro.setMatriculaSiape();
+	pro.setFormacao();
+	pro.setSalario();
+	pg.p = pro;
+	pg.OrientadorProfessor(pro);
+	Thread.sleep(50);
 	pg.setNome();
+		Thread.sleep(50);
 	pg.setMatricula();
+		Thread.sleep(50);
 	pg.setSemestreIngresso();
+		Thread.sleep(50);
 	pg.setSemestreQualificacao();
+		Thread.sleep(50);
 	pg.setDataDefesa();
 }
 
 if(opcaoAluno == 3) {
 	Especial e = new Especial();
+	pro = new Professor();
+	pro.setMatriculaFUB();
+	pro.setMatriculaSiape();
+	pro.setFormacao();
+	pro.setSalario();
+	e.p = pro;
+	e.OrientadorProfessor(pro);
+	Thread.sleep(50);
 	e.setNome();
+		Thread.sleep(50);
 	e.setNome();
+		Thread.sleep(50);
 	e.setSemestreIngresso();
+		Thread.sleep(50);
 	e.setSemestreQualificacao();
+		Thread.sleep(50);
 	e.setDataDefesa();
+		Thread.sleep(50);
 	e.setTaxaPaga();
+		Thread.sleep(50);
 	e.setSemestreCursado();
+		Thread.sleep(50);
 }
 return;
 
@@ -77,79 +113,132 @@ int opcaoProfessor = s.nextInt();
 if(opcaoProfessor == 1) {
 	Auxiliar a = new Auxiliar();
 	a.setMatriculaSiape();
+		Thread.sleep(50);
 	a.setMatriculaFUB();
+		Thread.sleep(50);
 	a.setFormacao();
-	a.setFormacao();
+		Thread.sleep(50);
 	a.setSalario();
+		Thread.sleep(50);
 	a.setGraduacao();
+		Thread.sleep(50);
 	a.setAnoGraduacao();
+		Thread.sleep(50);
 }
 
 if(opcaoProfessor == 2) {
 	Assistente a = new Assistente();
 	a.setMatriculaSiape();
+		Thread.sleep(50);
 	a.setMatriculaFUB();
+		Thread.sleep(50);
 	a.setFormacao();
+		Thread.sleep(50);
 	a.setSalario();
+		Thread.sleep(50);
 	a.setGraduacao();
+		Thread.sleep(50);
 	a.setAnoGraduacao();
+		Thread.sleep(50);
 	a.setMestrado();
+		Thread.sleep(50);
 	a.setAnoMestrado();
+		Thread.sleep(50);
 	a.setTituloDissertacao();
+		Thread.sleep(50);
 }
 
 if(opcaoProfessor == 3) {
 	Adjunto a = new Adjunto();
 	a.setMatriculaSiape();
-	a.setFormacao();
-	a.setSalario();
-	a.setGraduacao();
-	a.setAnoGraduacao();
-	a.setMestrado();
-	a.setAnoGraduacao();
-	a.setMestrado();
-	a.setAnoMestrado();
-	a.setTituloDissertacao();
-	a.setDoutorado();
-	a.setAnoDoutorado();
-	a.setTituloTese();
+		Thread.sleep(50);
 	a.setMatriculaFUB();
+		Thread.sleep(50);
+	a.setFormacao();
+		Thread.sleep(50);
+	a.setSalario();
+		Thread.sleep(50);
+	a.setGraduacao();
+		Thread.sleep(50);
+	a.setAnoGraduacao();
+		Thread.sleep(50);
+	a.setMestrado();
+		Thread.sleep(50);
+	a.setAnoMestrado();
+		Thread.sleep(50);
+	a.setTituloDissertacao();
+		Thread.sleep(50);
+	a.setDoutorado();
+		Thread.sleep(50);
+	a.setAnoDoutorado();
+		Thread.sleep(50);
+	a.setTituloTese();
+		Thread.sleep(50);
+	
 }
 
 if(opcaoProfessor == 4) {
 	Associado a = new Associado();
 	a.setMatriculaSiape();
+		Thread.sleep(50);
 	a.setMatriculaFUB();
+		Thread.sleep(50);
 	a.setFormacao();
+		Thread.sleep(50);
 	a.setSalario();
+		Thread.sleep(50);
 	a.setGraduacao();
+		Thread.sleep(50);
 	a.setAnoGraduacao();
+		Thread.sleep(50);
 	a.setMestrado();
+		Thread.sleep(50);
 	a.setAnoMestrado();
+		Thread.sleep(50);
 	a.setTituloDissertacao();
+		Thread.sleep(50);
 	a.setDoutorado();
+		Thread.sleep(50);
 	a.setAnoDoutorado();
+		Thread.sleep(50);
 	a.setTituloTese();
+		Thread.sleep(50);
 	a.setAreaPesquisa();
+		Thread.sleep(50);
 }
 	
 if(opcaoProfessor == 5) {
 	Titular t = new Titular();
 	t.setMatriculaSiape();
+		Thread.sleep(50);
 	t.setMatriculaFUB();
+		Thread.sleep(50);
 	t.setFormacao();
+		Thread.sleep(50);
 	t.setSalario();
+		Thread.sleep(50);
 	t.setGraduacao();
+		Thread.sleep(50);
 	t.setAnoGraduacao();
+		Thread.sleep(50);	
 	t.setMestrado();
+		Thread.sleep(50);
 	t.setAnoMestrado();
+		Thread.sleep(50);
 	t.setTituloDissertacao();
+		Thread.sleep(50);
 	t.setDoutorado();
+		Thread.sleep(50);
 	t.setAnoDoutorado();
+		Thread.sleep(50);
 	t.setTituloTese();
+		Thread.sleep(50);
 	t.setAreaPesquisa();
+		Thread.sleep(50);
 	t.setConcurso();
+		Thread.sleep(50);
 	t.setDataAdmissao();
+		Thread.sleep(50);
 }
 return;
 	
@@ -163,23 +252,44 @@ int opcaoDisciplina = s.nextInt();
 if(opcaoDisciplina == 1) {
 	Disciplina d = new Disciplina();
 	d.setNome();
+		Thread.sleep(50);
 	d.setNome();
+		Thread.sleep(50);
 }
 
 if(opcaoDisciplina == 2) {
 	Estagio e = new Estagio();
 	e.setNome();
+		Thread.sleep(50);
 	e.setNome();
+		Thread.sleep(50);
 	e.setResponsavel();
+		Thread.sleep(50);
 	e.setLocaEstagio();
+		Thread.sleep(50);
 }
 return;
 
 case 4:
 	Turma t = new Turma();
+	disc = new Disciplina();
+	pro = new Professor();
+	pro.setMatriculaFUB();
+	pro.setMatriculaSiape();
+	pro.setFormacao();
+	pro.setSalario();
+	t.p = pro;
+	t.ProfessorFaltante(pro);
+	Thread.sleep(50);
+	disc.setNome();
+	disc.setCargaHoraria();
+	t.d = disc;
+	t.DisciplinaFaltante(disc);
+		Thread.sleep(50);
 	t.setCodigo();
+		Thread.sleep(50);
 	t.setHorario();
-	System.out.println("Digite informacoes de Turma:\n");
+		Thread.sleep(50);
 	return;
 	
 default:

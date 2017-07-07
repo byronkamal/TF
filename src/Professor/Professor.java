@@ -17,9 +17,10 @@ public class Professor {
 		return matriculaSiape;
 	}
 	public void setMatriculaSiape() {
-		System.out.println("\nDigite matricula Siape");
+		String matriculaSiape2;
 		s = new Scanner(System.in);
-		String matriculaSiape2 = s.nextLine();
+		System.out.println("\nDigite matricula Siape");
+		matriculaSiape2 = s.nextLine();
 		this.matriculaSiape = matriculaSiape2;
 		
 		try {
@@ -29,7 +30,7 @@ public class Professor {
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Matricula Siape", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Matricula Siape", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}
@@ -38,10 +39,11 @@ public class Professor {
 		return matriculaFUB;
 	}
 	public void setMatriculaFUB() {
-		System.out.println("\nDigite matricula FUB:");
+		String matriculaFUB2;
 		s = new Scanner(System.in);
-		String matriuculaFUB2 = s.nextLine();
-		this.matriculaFUB = matriculaFUB;
+		System.out.println("\nDigite matricula FUB:");
+		matriculaFUB2 = s.next();
+		this.matriculaFUB = matriculaFUB2;
 		
 		try {
 			if(getMatriculaFUB().isEmpty()) {
@@ -50,7 +52,7 @@ public class Professor {
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Matricula FUB", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Matricula FUB", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}
@@ -66,12 +68,12 @@ public class Professor {
 		
 		try {
 			if(getFormacao().isEmpty()) {
-				throw new InformacaoFaltanteException("Informacao Faltante: Formacao\n");
+				throw new InformacaoFaltanteException("\n");
 			}
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Formacao", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}
@@ -82,8 +84,8 @@ public class Professor {
 	public void setSalario() {
 		System.out.println("\nDigite salario professor:");
 		s = new Scanner(System.in);
-		String salario = s.nextLine();
-		this.salario = salario;
+		String salario2 = s.nextLine();
+		this.salario = salario2;
 		
 		try {
 			if(getSalario().isEmpty()) {
@@ -92,7 +94,7 @@ public class Professor {
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Salario", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Salario", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}

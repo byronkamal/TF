@@ -13,12 +13,13 @@ public class Titular extends Associado{
 		try {
 	        s = new Scanner(System.in);
 	        System.out.println("Digite uma data: ");
+	        System.out.println("Ex: dd/mm/aaaa\n");
 		String concurso2 = s.nextLine();
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");  
 		Date dt = df.parse(concurso2);
 		System.out.println(dt);
 	    } catch (Exception e) {
-	    	JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Data Concurso", JOptionPane.ERROR_MESSAGE);
+	    	JOptionPane.showMessageDialog(null, "Informacao Faltante: Data Concurso", "Erro", JOptionPane.ERROR_MESSAGE);
 	        e.printStackTrace();
 	    }
 	}
@@ -28,12 +29,13 @@ public class Titular extends Associado{
 		try {
 	        s = new Scanner(System.in);
 	        System.out.println("Digite uma data: ");
+	        System.out.println("Ex: dd/mm/aaaa\n");
 		String dataAdmissao2 = s.nextLine();
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");  
 		Date dt = df.parse(dataAdmissao2);
 		System.out.println(dt);
 	    } catch (Exception e) {
-	    	JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Data Admissao", JOptionPane.ERROR_MESSAGE);
+	    	JOptionPane.showMessageDialog(null, "Informacao Faltante: Data Admissao", "Erro", JOptionPane.ERROR_MESSAGE);
 	        e.printStackTrace();
 	    }
 	}

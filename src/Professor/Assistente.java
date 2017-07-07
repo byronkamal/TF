@@ -31,7 +31,7 @@ public class Assistente extends Auxiliar{
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Mestrado", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Mestrado", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}
@@ -52,7 +52,7 @@ public class Assistente extends Auxiliar{
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Ano Mestrado", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Ano Mestrado", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}
@@ -73,7 +73,7 @@ public class Assistente extends Auxiliar{
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Titulo Dissertacao", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Titulo Dissertacao", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}

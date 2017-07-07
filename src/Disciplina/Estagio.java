@@ -1,6 +1,9 @@
 package Disciplina;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
+import ExceÁ„o.*;
 import Professor.Professor;
 
 public class Estagio extends Disciplina{
@@ -20,6 +23,17 @@ public class Estagio extends Disciplina{
 		s = new Scanner(System.in);
 		String localEstagio2 = s.nextLine();
 		this.localEstagio = localEstagio2;
+		
+		try {
+			if(getLocalEstagio().isEmpty()) {
+				throw new InformacaoFaltanteException("\n");
+			}
+				
+			}
+		catch(InformacaoFaltanteException e) {
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Local do Est√°gio", "Erro", JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
+			} 
 	}
 	
 	
@@ -31,7 +45,18 @@ public class Estagio extends Disciplina{
 		System.out.println("\nDigite professor responsavel:");
 		s = new Scanner(System.in);
 		String responsavel2 = s.nextLine();
-		this.responsavel = responsavel;
+		this.responsavel = responsavel2;
+		
+		try {
+			if(getResponsavel().isEmpty()) {
+				throw new InformacaoFaltanteException("\n");
+			}
+				
+			}
+		catch(InformacaoFaltanteException e) {
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Respons√°vel", "Erro", JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
+			} 
 	}
 	
 }

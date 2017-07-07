@@ -27,7 +27,7 @@ public class Auxiliar extends Professor{
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Graduacao", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Graduacao", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	
@@ -48,7 +48,7 @@ public class Auxiliar extends Professor{
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Ano Graduacao", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Ano Graduacao", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 	}
