@@ -72,5 +72,9 @@ public class PosGraduação extends Aluno {
 			}
 		}
 	}
+	public String getFormaIngresso() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

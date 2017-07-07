@@ -9,6 +9,17 @@ public class Titular extends Associado{
 
 	Scanner s;
 	
+	private Date concurso;
+	private Date dataAdmissao;
+	
+	public Date getConcurso() {
+		return concurso;
+	}
+	
+	public Date getDataAdmissao() {
+		return dataAdmissao;
+	}
+	
 	public void setConcurso() {
 		try {
 	        s = new Scanner(System.in);
@@ -18,6 +29,7 @@ public class Titular extends Associado{
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");  
 		Date dt = df.parse(concurso2);
 		System.out.println(dt);
+		this.concurso = dt;
 	    } catch (Exception e) {
 	    	JOptionPane.showMessageDialog(null, "Informacao Faltante: Data Concurso", "Erro", JOptionPane.ERROR_MESSAGE);
 	        e.printStackTrace();
@@ -34,6 +46,7 @@ public class Titular extends Associado{
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");  
 		Date dt = df.parse(dataAdmissao2);
 		System.out.println(dt);
+		this.dataAdmissao = dt;
 	    } catch (Exception e) {
 	    	JOptionPane.showMessageDialog(null, "Informacao Faltante: Data Admissao", "Erro", JOptionPane.ERROR_MESSAGE);
 	        e.printStackTrace();

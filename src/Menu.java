@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import Aluno.*;
+import Arquivo.*;
 import Disciplina.Disciplina;
 import Disciplina.Estagio;
 import Exceção.InformacaoFaltanteException;
@@ -12,13 +13,15 @@ import Professor.Professor;
 import Professor.Titular;
 import Turma.Turma;
 
+import java.io.*;
+
 public class Menu {
 	Professor pro;
 	Disciplina disc;
 	
 	Scanner s;
 	
-	Menu(int opcao) throws InterruptedException {
+	Menu(int opcao) throws InterruptedException, IOException {
 	
 	int numero = opcao;	
 		
@@ -46,7 +49,11 @@ if(opcaoAluno == 1) {
 		Thread.sleep(50);
 	g.setProvavelFormatura();
 		Thread.sleep(50);
-	
+		
+	//Salvar Arquivo
+	AlunoArquivo arq = new AlunoArquivo(g);
+	Thread.sleep(50);
+		
 	}
 
 if(opcaoAluno == 2) {
@@ -76,6 +83,10 @@ if(opcaoAluno == 2) {
 	pg.setSemestreQualificacao();
 		Thread.sleep(50);
 	pg.setDataDefesa();
+	
+	//Salvar Arquivo
+	AlunoArquivo arq = new AlunoArquivo(pg);
+	Thread.sleep(50);
 }
 
 if(opcaoAluno == 3) {
@@ -110,6 +121,9 @@ if(opcaoAluno == 3) {
 		Thread.sleep(50);
 	e.setSemestreCursado();
 		Thread.sleep(50);
+	//Salvar Arquivo
+	AlunoArquivo arq = new AlunoArquivo(e);
+	Thread.sleep(50);
 }
 return;
 
@@ -137,6 +151,10 @@ if(opcaoProfessor == 1) {
 		Thread.sleep(50);
 	a.setAnoGraduacao();
 		Thread.sleep(50);
+
+	//Salvar arquivo
+	ProfessorArquivo arq = new ProfessorArquivo(a);
+	Thread.sleep(50);
 }
 
 if(opcaoProfessor == 2) {
@@ -159,6 +177,10 @@ if(opcaoProfessor == 2) {
 		Thread.sleep(50);
 	a.setTituloDissertacao();
 		Thread.sleep(50);
+	
+	//Salvar arquivo
+	ProfessorArquivo arq = new ProfessorArquivo(a);
+	Thread.sleep(50);
 }
 
 if(opcaoProfessor == 3) {
@@ -187,6 +209,10 @@ if(opcaoProfessor == 3) {
 		Thread.sleep(50);
 	a.setTituloTese();
 		Thread.sleep(50);
+	
+	//Salvar arquivo
+	ProfessorArquivo arq = new ProfessorArquivo(a);	
+	Thread.sleep(50);
 	
 }
 
@@ -218,6 +244,10 @@ if(opcaoProfessor == 4) {
 		Thread.sleep(50);
 	a.setAreaPesquisa();
 		Thread.sleep(50);
+	
+	//Salvar arquivo
+	ProfessorArquivo arq = new ProfessorArquivo(a);
+	Thread.sleep(50);
 }
 	
 if(opcaoProfessor == 5) {
@@ -252,6 +282,10 @@ if(opcaoProfessor == 5) {
 		Thread.sleep(50);
 	t.setDataAdmissao();
 		Thread.sleep(50);
+		
+	//Salvar arquivo
+	ProfessorArquivo arq = new ProfessorArquivo(t);
+	Thread.sleep(50);
 }
 return;
 	
@@ -268,18 +302,34 @@ if(opcaoDisciplina == 1) {
 		Thread.sleep(50);
 	d.setCargaHoraria();
 		Thread.sleep(50);
+		
+	//Salvar Arquivo	
+	DisciplinaArquivo arq = new DisciplinaArquivo(d);
+	Thread.sleep(50);
 }
 
 if(opcaoDisciplina == 2) {
+	Professor pro = new Professor();
 	Estagio e = new Estagio();
+	
+	pro.setMatriculaSiape();
+	Thread.sleep(50);
+	pro.setMatriculaFUB();
+	Thread.sleep(50);
+	pro.setFormacao();
+	e.p = pro;
 	e.setNome();
 		Thread.sleep(50);
-	e.setNome();
+	e.setCargaHoraria();
 		Thread.sleep(50);
 	e.setResponsavel();
 		Thread.sleep(50);
 	e.setLocaEstagio();
 		Thread.sleep(50);
+		
+	//Salvar Arquivo	
+	DisciplinaArquivo arq = new DisciplinaArquivo(e, pro);
+	Thread.sleep(50);
 }
 return;
 
@@ -315,6 +365,10 @@ case 4:
 		Thread.sleep(50);
 	t.setHorario();
 		Thread.sleep(50);
+		
+	//Salvar Arquivo
+	TurmaArquivo arq = new TurmaArquivo(t, pro, disc);
+	Thread.sleep(50);
 	return;
 	
 case 0:
@@ -323,6 +377,7 @@ case 0:
 	
 default:
 	System.out.println("Opcao incorreta!");
+	Thread.sleep(50);
 	return;
 	}
 	

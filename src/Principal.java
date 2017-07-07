@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.*;
 
 import javax.swing.JOptionPane;
@@ -10,7 +11,7 @@ import Turma.*;
 public class Principal {
 
 	
-	public static void main(String[] args ) throws InterruptedException {
+	public static void main(String[] args ) throws InterruptedException, IOException {
 		
 		
 		int opcao;

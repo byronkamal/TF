@@ -83,6 +83,6 @@ public class Graduacao extends Aluno {
 					JOptionPane.showMessageDialog(null, "Informação Faltante: Data Provavel Formatura", "Erro", JOptionPane.ERROR_MESSAGE);
 					e.printStackTrace();
 				}
-	
-	}
+		}
+
 }

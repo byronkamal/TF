@@ -9,7 +9,7 @@ import Professor.Professor;
 public class Estagio extends Disciplina{
 
 	Scanner s;
-	Professor p;
+	public Professor p;
 	
 	private String localEstagio;
 	private String responsavel;
