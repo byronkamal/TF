@@ -18,6 +18,7 @@ public class Principal {
 		Menu m;
 		
 		while (true) {
+		Thread.sleep(100);
 		System.out.println("\n\n>>>MENU<<<\n" +
 				"1 - Cadastrar Aluno\n" + 
 				"2 - Cadastrar Professor\n" +

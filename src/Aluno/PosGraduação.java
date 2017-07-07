@@ -55,7 +55,7 @@ public class PosGraduação extends Aluno {
 				Date dt = df.parse(recebeData);	
 				this.dataDefesa = dt;
 			} catch (ParseException e) {
-				JOptionPane.showMessageDialog(null, "InformaÃ§Ã£o Faltante: Data da Defesa", "Erro", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Informacao Faltante: Data da Defesa", "Erro", JOptionPane.ERROR_MESSAGE);
 				e.printStackTrace();
 			}
 	}
@@ -67,7 +67,7 @@ public class PosGraduação extends Aluno {
 				throw new OrientadorNaoAtribuidoException("\n");
 			}
 			catch (OrientadorNaoAtribuidoException e){
-				JOptionPane.showMessageDialog(null, "Informacao Faltante: Professor nao atribuida", "Erro", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Orientador(a) nao atribuido(a)\n Falta matricula Siape e/ou FUB", "Erro", JOptionPane.ERROR_MESSAGE);
 				e.printStackTrace();
 			}
 		}

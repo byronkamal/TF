@@ -33,23 +33,12 @@ public class Turma {
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, "Informacao Faltante: Código", "Erro", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Codigo", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 			
-			while(getCodigo().isEmpty()){
-			
-			Thread.sleep(50);
-			System.out.println("\nInsira Código novamente");
+				this.codigo = codigo2;	
 				
-				codigo2 = s.nextLine();
-				if(codigo2.isEmpty()){
-				JOptionPane.showMessageDialog(null, "Informacao Faltante: Código", "Erro", JOptionPane.ERROR_MESSAGE);
-				}
-				this.codigo = codigo2;
-				
-				
-			}
 		}
 		
 		
@@ -74,7 +63,7 @@ public class Turma {
 				
 			}
 		catch(InformacaoFaltanteException e) {
-			JOptionPane.showMessageDialog(null, "Informacao Faltante: Horário", "Erro", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Informacao Faltante: Horario", "Erro", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
 			} 
 		
@@ -87,7 +76,7 @@ public class Turma {
 				throw new ProfessorNaoAtribuidoException("\n");
 			}
 			catch (ProfessorNaoAtribuidoException e){
-				JOptionPane.showMessageDialog(null, "Informacao Faltante: Professor nao atribuida", "Erro", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Professor(a) nao atribuido(a)\n Falta matricula Siape e/ou FUB", "Erro", JOptionPane.ERROR_MESSAGE);
 				e.printStackTrace();
 			}
 		}
@@ -100,7 +89,7 @@ public class Turma {
 				throw new DisciplinaNaoAtribuidaException("\n");
 			}
 			catch (DisciplinaNaoAtribuidaException e){
-				JOptionPane.showMessageDialog(null, "Informacao Faltante: Disciplina nao atribuida", "Erro", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Disciplina nao atribuida\n Falta nome da disciplina", "Erro", JOptionPane.ERROR_MESSAGE);
 				e.printStackTrace();
 			}
 		}
