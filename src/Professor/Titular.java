@@ -3,6 +3,8 @@ import java.text.*;
 import java.util.Date;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Titular extends Associado{
 
 	Scanner s;
@@ -15,8 +17,9 @@ public class Titular extends Associado{
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");  
 		Date dt = df.parse(concurso2);
 		System.out.println(dt);
-	    } catch (Exception ex) {
-	        ex.printStackTrace();
+	    } catch (Exception e) {
+	    	JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Data Concurso", JOptionPane.ERROR_MESSAGE);
+	        e.printStackTrace();
 	    }
 	}
 	
@@ -29,8 +32,9 @@ public class Titular extends Associado{
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");  
 		Date dt = df.parse(dataAdmissao2);
 		System.out.println(dt);
-	    } catch (Exception ex) {
-	        ex.printStackTrace();
+	    } catch (Exception e) {
+	    	JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Data Admissao", JOptionPane.ERROR_MESSAGE);
+	        e.printStackTrace();
 	    }
 	}
 }

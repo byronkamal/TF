@@ -1,6 +1,10 @@
 package Professor;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
+import Exceção.InformacaoFaltanteException;
+
 public class Assistente extends Auxiliar{
 	
 	Scanner s;
@@ -19,6 +23,17 @@ public class Assistente extends Auxiliar{
 		s = new Scanner(System.in);
 		String mestrado2 = s.nextLine();
 		this.mestrado = mestrado2;
+		
+		try {
+			if(getMestrado().isEmpty()) {
+				throw new InformacaoFaltanteException("\n");
+			}
+				
+			}
+		catch(InformacaoFaltanteException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Mestrado", JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
+			} 
 	}
 	
 	public String getAnoMestrado() {
@@ -29,6 +44,17 @@ public class Assistente extends Auxiliar{
 		s = new Scanner(System.in);
 		String anoMestrado2 = s.nextLine();
 		this.anoMestrado = anoMestrado2;
+		
+		try {
+			if(getAnoMestrado().isEmpty()) {
+				throw new InformacaoFaltanteException("\n");
+			}
+				
+			}
+		catch(InformacaoFaltanteException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Ano Mestrado", JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
+			} 
 	}
 	
 	public String getTituloDissertacao() {
@@ -39,5 +65,16 @@ public class Assistente extends Auxiliar{
 		s = new Scanner(System.in);
 		String tituloDissertacao2 = s.nextLine();
 		this.tituloDissertacao = tituloDissertacao2;
+		
+		try {
+			if(getTituloDissertacao().isEmpty()) {
+				throw new InformacaoFaltanteException("\n");
+			}
+				
+			}
+		catch(InformacaoFaltanteException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Titulo Dissertacao", JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
+			} 
 	}
 }

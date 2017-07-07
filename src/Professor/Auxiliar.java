@@ -1,6 +1,10 @@
 package Professor;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
+import Exceção.InformacaoFaltanteException;
+
 public class Auxiliar extends Professor{
 	Scanner s;
 	
@@ -15,6 +19,17 @@ public class Auxiliar extends Professor{
 		s = new Scanner(System.in);
 		String graduacao2 = s.nextLine();
 		this.graduacao = graduacao2;
+		
+		try {
+			if(getGraduacao().isEmpty()) {
+				throw new InformacaoFaltanteException("\n");
+			}
+				
+			}
+		catch(InformacaoFaltanteException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Graduacao", JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
+			} 
 	
 	}
 	public String getAnoGraduacao() {
@@ -25,5 +40,16 @@ public class Auxiliar extends Professor{
 		s = new Scanner(System.in);
 		String anoGraduacao2 = s.nextLine();
 		this.anoGraduacao = anoGraduacao2;
+		
+		try {
+			if(getAnoGraduacao().isEmpty()) {
+				throw new InformacaoFaltanteException("\n");
+			}
+				
+			}
+		catch(InformacaoFaltanteException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(), "Informacao Faltante: Ano Graduacao", JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
+			} 
 	}
 }
