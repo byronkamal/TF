@@ -18,12 +18,9 @@ public class Menu {
 	
 	Scanner s;
 	
-	Menu(int num) throws InterruptedException {
+	Menu(int opcao) throws InterruptedException {
 	
-	int numero = num;
-	
-	do {
-		
+	int numero = opcao;	
 		
 switch (numero){
 
@@ -253,7 +250,7 @@ if(opcaoDisciplina == 1) {
 	Disciplina d = new Disciplina();
 	d.setNome();
 		Thread.sleep(50);
-	d.setNome();
+	d.setCargaHoraria();
 		Thread.sleep(50);
 }
 
@@ -292,11 +289,14 @@ case 4:
 		Thread.sleep(50);
 	return;
 	
+case 0:
+		System.out.println("Terminou!\n");
+	return;
+	
 default:
 	System.out.println("Opcao incorreta!");
 	return;
-		}
-	}while(numero != 0);
-}
+	}
 	
+	}
 }
