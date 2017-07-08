@@ -18,7 +18,11 @@
 que poderá ser encotrado na pasta do projeto com o nome "Universidadee.txt".
 
 **Para executar:**
+
 Abra a IDE Eclipse;
+
 Abra o diretorio raiz do projeto;
+
 Aperte executar;
+
 As informações requeridas aparecerão no console.
