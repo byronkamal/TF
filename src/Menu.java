@@ -1,10 +1,13 @@
+//Byron Kamal Barreto Correa - 15/0007281
+//Luciana Ribeiro L. de Albuquerque - 15/0016131
+
 import java.util.Scanner;
 
 import Aluno.*;
 import Arquivo.*;
 import Disciplina.Disciplina;
 import Disciplina.Estagio;
-import Exceção.InformacaoFaltanteException;
+import ExceÃ§Ã£o.InformacaoFaltanteException;
 import Professor.Adjunto;
 import Professor.Assistente;
 import Professor.Associado;
@@ -58,7 +61,7 @@ if(opcaoAluno == 1) {
 	}
 
 if(opcaoAluno == 2) {
-	PosGraduação pg = new PosGraduação();
+	PosGraduaÃ§Ã£o pg = new PosGraduaÃ§Ã£o();
 	System.out.println("-----------------------------------\n");
 	System.out.println("--INFORMACOES DO(A) ORIENTADOR(A)--\n");
 
