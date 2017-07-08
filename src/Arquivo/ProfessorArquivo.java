@@ -17,17 +17,18 @@ public class ProfessorArquivo {
 	
 	public ProfessorArquivo(Auxiliar aux) {
 		this.aux = aux;
-	File arquivo = new File("Universide.txt");
+	File arquivo = new File("Universidade.txt");
 	
 	try {
 		arquivo.createNewFile();
 		FileWriter escrever = new FileWriter(arquivo, true);
 		BufferedWriter escreverArq = new BufferedWriter(escrever);
-		escreverArq.write("INFOMACOES PROFESSOR ADJUNTO:");
+		escreverArq.write("---------------------------------");
+		escreverArq.write("\nINFOMACOES PROFESSOR AUXILIAR:\n");
+		escreverArq.newLine();
 		escreverArq.write("Matriucla Siape: " + aux.getMatriculaSiape() );
 		escreverArq.newLine();
 		escreverArq.write("Matricula FUB: " + aux.getMatriculaFUB() );
-		escreverArq.newLine();
 		escreverArq.newLine();
 		escreverArq.write("Formacao: " + aux.getFormacao() ); 
 		escreverArq.newLine();
@@ -48,17 +49,18 @@ public class ProfessorArquivo {
 	
 	ProfessorArquivo(Assistente as) {
 		this.as = as;
-	File arquivo = new File("Universide.txt");
+	File arquivo = new File("Universidade.txt");
 	
 	try {
 		arquivo.createNewFile();
 		FileWriter escrever = new FileWriter(arquivo, true);
 		BufferedWriter escreverArq = new BufferedWriter(escrever);
-		escreverArq.write("INFOMACOES PROFESSOR ASSISTENTE:");
+		escreverArq.write("------------------------------------");
+		escreverArq.write("\nINFOMACOES PROFESSOR ASSISTENTE:\n");
+		escreverArq.newLine();
 		escreverArq.write("Matriucla Siape: " + as.getMatriculaSiape() );
 		escreverArq.newLine();
 		escreverArq.write("Matricula FUB: " + as.getMatriculaFUB() );
-		escreverArq.newLine();
 		escreverArq.newLine();
 		escreverArq.write("Formacao: " + as.getFormacao() ); 
 		escreverArq.newLine();
@@ -85,17 +87,18 @@ public class ProfessorArquivo {
 	
 	public ProfessorArquivo(Adjunto adj) {
 		this.adj = adj;
-	File arquivo = new File("Universide.txt");
+	File arquivo = new File("Universidade.txt");
 	
 	try {
 		arquivo.createNewFile();
 		FileWriter escrever = new FileWriter(arquivo, true);
 		BufferedWriter escreverArq = new BufferedWriter(escrever);
+		escreverArq.write("---------------------------------");
+		escreverArq.write("\nINFOMACOES PROFESSOR ADJUNTO:\n");
 		escreverArq.newLine();
 		escreverArq.write("Matriucla Siape: " + adj.getMatriculaSiape() );
 		escreverArq.newLine();
 		escreverArq.write("Matricula FUB: " + adj.getMatriculaFUB() );
-		escreverArq.newLine();
 		escreverArq.newLine();
 		escreverArq.write("Formacao: " + adj.getFormacao() ); 
 		escreverArq.newLine();
@@ -128,17 +131,18 @@ public class ProfessorArquivo {
 	
 	public ProfessorArquivo(Associado asso) {
 		this.asso = asso;
-	File arquivo = new File("Universide.txt");
+	File arquivo = new File("Universidade.txt");
 	
 	try {
 		arquivo.createNewFile();
 		FileWriter escrever = new FileWriter(arquivo, true);
 		BufferedWriter escreverArq = new BufferedWriter(escrever);
-		escreverArq.write("INFOMACOES PROFESSOR ADJUNTO:");
+		escreverArq.write("-----------------------------------");
+		escreverArq.write("\nINFOMACOES PROFESSOR ASSOCIADO:\n");
+		escreverArq.newLine();
 		escreverArq.write("Matriucla Siape: " + asso.getMatriculaSiape() );
 		escreverArq.newLine();
 		escreverArq.write("Matricula FUB: " + asso.getMatriculaFUB() );
-		escreverArq.newLine();
 		escreverArq.newLine();
 		escreverArq.write("Formacao: " + asso.getFormacao() ); 
 		escreverArq.newLine();
@@ -174,17 +178,18 @@ public class ProfessorArquivo {
 	
 	public ProfessorArquivo(Titular t) {
 		this.t = t;
-	File arquivo = new File("Universide.txt");
+	File arquivo = new File("Universidade.txt");
 	
 	try {
 		arquivo.createNewFile();
 		FileWriter escrever = new FileWriter(arquivo, true);
 		BufferedWriter escreverArq = new BufferedWriter(escrever);
-		escreverArq.write("INFOMACOES PROFESSOR ADJUNTO:");
+		escreverArq.write("---------------------------------");
+		escreverArq.write("\nINFOMACOES PROFESSOR TITULAR:\n");
+		escreverArq.newLine();
 		escreverArq.write("Matriucla Siape: " + t.getMatriculaSiape() );
 		escreverArq.newLine();
 		escreverArq.write("Matricula FUB: " + t.getMatriculaFUB() );
-		escreverArq.newLine();
 		escreverArq.newLine();
 		escreverArq.write("Formacao: " + t.getFormacao() ); 
 		escreverArq.newLine();

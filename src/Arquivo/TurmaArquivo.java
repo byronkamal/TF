@@ -20,12 +20,14 @@ public class TurmaArquivo {
 		this.p = p;
 		this.d = d;
 		
-	File arquivo = new File("Universide.txt");
+	File arquivo = new File("Universidade.txt");
 	try {
 	arquivo.createNewFile();
 	FileWriter escrever = new FileWriter(arquivo, true);
 	BufferedWriter escreverArq = new BufferedWriter(escrever);
-	escreverArq.write("INFOMACOES TURMA:");
+	escreverArq.write("-----------------");
+	escreverArq.write("\nINFOMACOES TURMA:\n");
+	escreverArq.newLine();
 	escreverArq.write("COdigo: " + t.getCodigo() );
 	escreverArq.newLine();
 	escreverArq.write("Horario: " + t.getHorario() );
@@ -33,6 +35,7 @@ public class TurmaArquivo {
 	escreverArq.write("Matriucla Siape professor associado: " + p.getMatriculaSiape() );
 	escreverArq.newLine();
 	escreverArq.write("Matricula FUB professor: " + p.getMatriculaFUB() );
+	escreverArq.newLine();
 	escreverArq.write("Formacao professor: " + p.getFormacao() );
 	escreverArq.newLine();
 	escreverArq.write("Nome Disciplina: " + d.getNome() );

@@ -1,5 +1,6 @@
 package Arquivo;
 
+import java.awt.Menu;
 import java.io.*;
 import Aluno.*;
 
@@ -8,19 +9,21 @@ public class AlunoArquivo {
 	private Graduacao g;
 	private PosGraduação pg;
 	private Especial e;
+	private Menu m;
 	
 	public AlunoArquivo(Graduacao g) {
 		this.g = g;
-		File arquivo = new File("Universide.txt");
+		File arquivo = new File("Universidade.txt");
 		try {
 		arquivo.createNewFile();
 		FileWriter escrever = new FileWriter(arquivo, true);
 		BufferedWriter escreverArq = new BufferedWriter(escrever);
-		escreverArq.write("INFOMACOES ALUNO GRADUACAO:");
+		escreverArq.write("------------------------------");
+		escreverArq.write("\nINFOMACOES ALUNO GRADUACAO\n");
+		escreverArq.newLine();
 		escreverArq.write("Nome: " + g.getNome() );
 		escreverArq.newLine();
 		escreverArq.write("Matricula: " + g.getMatricula() );
-		escreverArq.newLine();
 		escreverArq.newLine();
 		escreverArq.write("Semestre ingresso: " + g.getSemestreIngresso() ); 
 		escreverArq.newLine();
@@ -41,16 +44,17 @@ public class AlunoArquivo {
 	
 	public AlunoArquivo(PosGraduação pg) {
 		this.pg = pg;
-		File arquivo = new File("Universide.txt");
+		File arquivo = new File("Universidade.txt");
 		try {
 		arquivo.createNewFile();
 		FileWriter escrever = new FileWriter(arquivo, true);
 		BufferedWriter escreverArq = new BufferedWriter(escrever);
-		escreverArq.write("INFOMACOES ALUNO POS-GRADUACAO:");
+		escreverArq.write("------------------------------");
+		escreverArq.write("\nINFOMACOES ALUNO POS-GRADUACAO:\n");
+		escreverArq.newLine();
 		escreverArq.write("Nome: " + pg.getNome() );
 		escreverArq.newLine();
 		escreverArq.write("Matricula: " + pg.getMatricula() );
-		escreverArq.newLine();
 		escreverArq.newLine();
 		escreverArq.write("Semestre ingresso: " + pg.getSemestreIngresso() ); 
 		escreverArq.newLine();
@@ -69,12 +73,14 @@ public class AlunoArquivo {
 	
 	public AlunoArquivo(Especial e) {
 	this.e = e;
-	File arquivo = new File("Universide.txt");
+	File arquivo = new File("Universidade.txt");
 	try {
 	arquivo.createNewFile();
 	FileWriter escrever = new FileWriter(arquivo, true);
 	BufferedWriter escreverArq = new BufferedWriter(escrever);
-	escreverArq.write("INFOMACOES ALUNO ESPECIAL:");
+	escreverArq.write("--------------------------");
+	escreverArq.write("\nINFOMACOES ALUNO ESPECIAL:\n");
+	escreverArq.newLine();
 	escreverArq.write("Nome: " + e.getNome() );
 	escreverArq.newLine();
 	escreverArq.write("Matricula: " + e.getMatricula() );

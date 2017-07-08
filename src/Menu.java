@@ -24,7 +24,7 @@ public class Menu {
 	Menu(int opcao) throws InterruptedException, IOException {
 	
 	int numero = opcao;	
-		
+	
 switch (numero){
 
 case 1:
@@ -37,6 +37,8 @@ int opcaoAluno = s.nextInt();
 
 if(opcaoAluno == 1) {
 	Graduacao g = new Graduacao();
+	System.out.println("------------------------------\n");
+	System.out.println("--INFORMACOES DO(A) ALUNO(A)--\n");
 	g.setNome();
 		Thread.sleep(50);
 	g.setMatricula();
@@ -49,16 +51,17 @@ if(opcaoAluno == 1) {
 		Thread.sleep(50);
 	g.setProvavelFormatura();
 		Thread.sleep(50);
-		
 	//Salvar Arquivo
 	AlunoArquivo arq = new AlunoArquivo(g);
 	Thread.sleep(50);
-		
+	
 	}
 
 if(opcaoAluno == 2) {
 	PosGraduação pg = new PosGraduação();
-	System.out.println("Informações do(a) orientador(a):\n");
+	System.out.println("-----------------------------------\n");
+	System.out.println("--INFORMACOES DO(A) ORIENTADOR(A)--\n");
+
 	pro = new Professor();
 	Thread.sleep(50);
 	pro.setMatriculaFUB();
@@ -72,7 +75,8 @@ if(opcaoAluno == 2) {
 	pg.p = pro;
 	pg.OrientadorProfessor(pro);
 	Thread.sleep(50);
-	System.out.println("Informações do(a) aluno(a):\n");
+	System.out.println("-----------------------------------------------\n");
+	System.out.println("--INFORMACOES DO(A) ALUNO(A) DE POS-GRADUACAO--\n");
 	Thread.sleep(50);
 	pg.setNome();
 		Thread.sleep(50);
@@ -92,7 +96,8 @@ if(opcaoAluno == 2) {
 if(opcaoAluno == 3) {
 	Especial e = new Especial();
 	pro = new Professor();
-	System.out.println("Informações do(a) orientador(a):\n");
+	System.out.println("-----------------------------------\n");
+	System.out.println("--INFORMACOES DO(A) ORIENTADOR(A)--\n");
 	Thread.sleep(50);
 	pro.setMatriculaFUB();
 	Thread.sleep(50);
@@ -105,11 +110,12 @@ if(opcaoAluno == 3) {
 	e.p = pro;
 	e.OrientadorProfessor(pro);
 	Thread.sleep(50);
-	System.out.println("Informações do(a) aluno(a):\n");
+	System.out.println("---------------------------------------\n");
+	System.out.println("--INFORMACOES DO(A) ALUNO(A) ESPECIAL--\n");
 	Thread.sleep(50);
 	e.setNome();
 		Thread.sleep(50);
-	e.setNome();
+	e.setMatricula();
 		Thread.sleep(50);
 	e.setSemestreIngresso();
 		Thread.sleep(50);
@@ -139,6 +145,9 @@ int opcaoProfessor = s.nextInt();
 
 if(opcaoProfessor == 1) {
 	Auxiliar a = new Auxiliar();
+	System.out.println("----------------------------------\n");
+	System.out.println("--INFORMACOES DO(A) PROFESSOR(A)--\n");
+		Thread.sleep(50);
 	a.setMatriculaSiape();
 		Thread.sleep(50);
 	a.setMatriculaFUB();
@@ -312,17 +321,21 @@ if(opcaoDisciplina == 2) {
 	Professor pro = new Professor();
 	Estagio e = new Estagio();
 	
+	System.out.println("-----------------------------------\n");
+	System.out.println("--INFORMACOES DO(A) PROFESSOR RESPONSAVEL--\n");
+	e.setResponsavel();
+	Thread.sleep(50);
 	pro.setMatriculaSiape();
 	Thread.sleep(50);
 	pro.setMatriculaFUB();
 	Thread.sleep(50);
 	pro.setFormacao();
 	e.p = pro;
+	System.out.println("-----------------------------------\n");
+	System.out.println("--INFORMACOES DO(A) ALUNO(A) DE ESTAGIO--\n");
 	e.setNome();
 		Thread.sleep(50);
 	e.setCargaHoraria();
-		Thread.sleep(50);
-	e.setResponsavel();
 		Thread.sleep(50);
 	e.setLocaEstagio();
 		Thread.sleep(50);
@@ -339,7 +352,8 @@ case 4:
 	disc = new Disciplina();
 	Thread.sleep(50);
 	pro = new Professor();
-	System.out.println("Informações do(a) professor(a) associado(a):\n");
+	System.out.println("-----------------------------------------------\n");
+	System.out.println("--INFORMACOES DO(A) PROFESSOR(A) ASSOCIADO(A)--\n");
 	Thread.sleep(50);
 	pro.setMatriculaFUB();
 	Thread.sleep(50);
@@ -352,7 +366,8 @@ case 4:
 	t.p = pro;
 	t.ProfessorFaltante(pro);
 	Thread.sleep(50);
-	System.out.println("Informações da disciplina:\n");
+	System.out.println("-----------------------------\n");
+	System.out.println("--INFORMACOES DA DISCIPLINA--\n");
 	disc.setNome();
 	Thread.sleep(50);
 	disc.setCargaHoraria();
@@ -360,7 +375,8 @@ case 4:
 	t.d = disc;
 	t.DisciplinaFaltante(disc);
 		Thread.sleep(50);
-		System.out.println("Informações da turma:\n");
+		System.out.println("------------------------\n");
+		System.out.println("--INFORMACOES DA TURMA--\n");
 	t.setCodigo();
 		Thread.sleep(50);
 	t.setHorario();
@@ -372,11 +388,11 @@ case 4:
 	return;
 	
 case 0:
-		System.out.println("Terminou!\n");
+		System.out.println("Programa Encerrado!\n");
 	return;
 	
 default:
-	System.out.println("Opcao incorreta!");
+	System.out.println("Opcao Incorreta!");
 	Thread.sleep(50);
 	return;
 	}

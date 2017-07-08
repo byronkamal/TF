@@ -18,7 +18,7 @@ public class DisciplinaArquivo {
 	public DisciplinaArquivo(Disciplina d) {
 		this.d = d;
 		
-		File arquivo = new File("Universide.txt");
+		File arquivo = new File("Universidade.txt");
 		try {
 		arquivo.createNewFile();
 		FileWriter escrever = new FileWriter(arquivo, true);
@@ -42,7 +42,7 @@ public class DisciplinaArquivo {
 		this.e = e;
 		this.pro = pro;
 		
-		File arquivo = new File("Universide.txt");
+		File arquivo = new File("Universidade.txt");
 		try {
 		arquivo.createNewFile();
 		FileWriter escrever = new FileWriter(arquivo, true);
